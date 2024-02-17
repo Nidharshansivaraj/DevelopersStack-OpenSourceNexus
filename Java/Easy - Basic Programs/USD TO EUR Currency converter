@@ -1,0 +1,33 @@
+package Currencyconverter;
+
+import java.util.Scanner;
+
+public class CurrencyConverter {
+
+    
+    public static double convertCurrency(double amount, double rate) {
+        return amount * rate;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        
+        double usdToEurRate = 0.85; 
+
+        System.out.println("Currency Converter: USD to EUR");
+        System.out.print("Enter amount in USD: ");
+        
+        
+        double amountInUsd = scanner.nextDouble();
+        
+        
+        double amountInEur = convertCurrency(amountInUsd, usdToEurRate);
+        
+        
+        System.out.printf("%.2f USD is equivalent to %.2f EUR", amountInUsd, amountInEur);
+        
+       
+        scanner.close();
+    }
+}
